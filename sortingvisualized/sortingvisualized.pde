@@ -36,21 +36,15 @@ void draw() {
   drawRect(arr);
 }
 
-int[] generateArray() {
-  
-  int step = height/len; 
+int[] generateRandomArray() {
   
   int original[] = new int[len];  
-  
-  
-  for(int i=0; i<original.length;i++)
-  {  
-  original[i]+=step*i;  
-  }    
-
-    // Shuffles array
-
-    Random rgen = new Random();       
+  for(int i=0; i<original.length;i++){
+  //  original[i] = int(random(0,100));
+original[i] = i;
+}    
+    Random rgen = new Random();      
+    
   
     for (int i=0; i<original.length; i++) {
         int randomPosition = rgen.nextInt(original.length);
@@ -59,8 +53,6 @@ int[] generateArray() {
         original[randomPosition] = temp;
     }   
 
-    //
-    
     return original;
 }
 
