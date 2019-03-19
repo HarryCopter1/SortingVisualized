@@ -23,7 +23,7 @@ private void shuffle(int[] i) {
       int a = i[index1];
       i[index1] = i[index2];
       i[index2] = a;
-      delay(del);
+    //  delay(del);
     }
   }
 

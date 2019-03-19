@@ -32,10 +32,14 @@ void gravitySort(int[] array)
       //  int[] arr=new int[array.length];
         for(int i = 0; i < array.length; i++) {
             int putt = 0;
-            for(int j = 0; j < max && grid[arr.length - 1 - i][j] == BeadSortStatus.MARKED; j++) {
+            for(int j = 0; j < max && grid[array.length - 1 - i][j] == BeadSortStatus.MARKED; j++) {
                 putt++;
-            }
-            arr[i] = putt;
+    System.out.println(putt);
       delay(del);
+            }
+          int temp = array[i];
+          array[i] = putt;
+          putt=temp;
+           // array[i] = putt;
         }
   }
